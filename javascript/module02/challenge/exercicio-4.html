@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chalenge #04</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
+            <div class="list">
+                <ul class="list-names">
+
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            function adicionar() {
+                var inputElement = document.querySelector('input[name="nome"]');
+                var listNamesElement = document.querySelector('.list-names');
+
+                var textElement = document.createTextNode(inputElement.value);
+                var itemElement = document.createElement('li');
+
+                itemElement.appendChild(textElement);
+                listNamesElement.appendChild(itemElement);
+
+                inputElement.value = "";
+            }
+        </script>
+    </body>
+</html> 
