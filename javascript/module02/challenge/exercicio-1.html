@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chalenge #01</title>
+    </head>
+    <body>
+        <div id="app">
+            <button id="botao">Adicionar</button>
+        </div>
+
+        <script>
+            var appElement = document.querySelector('#app'); 
+            var btnElement = document.querySelector("#botao");
+
+            btnElement.onclick = function(){
+                let box = document.createElement("div");
+                box.style.width  = '100px';
+                box.style.height = '100px';
+                box.style.backgroundColor = '#F00';
+                box.style.margin = '2px 0';
+                appElement.appendChild(box);
+            }
+        </script>
+    </body>
+</html> 
