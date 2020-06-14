@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chalenge #01</title>
+    </head>
+    <body>
+        <div id="app">
+        </div>
+
+        <script>
+            var appElement = document.querySelector('#app'); 
+            var listElement = document.createElement('ul');
+
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            for (var i = 0; i < nomes.length; i++) {
+                var itemElement = document.createElement('li');
+                itemElement.appendChild(document.createTextNode(nomes[i]));
+
+                listElement.appendChild(itemElement);
+            }
+
+            appElement.appendChild(listElement);
+        </script>
+    </body>
+</html> 
