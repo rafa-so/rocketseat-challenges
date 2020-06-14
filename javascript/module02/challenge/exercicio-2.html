@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chalenge #01</title>
+    </head>
+    <body>
+        <div id="app">
+            <button id="botao">Adicionar</button>
+        </div>
+
+        <script>
+            var appElement = document.querySelector('#app'); 
+            var btnElement = document.querySelector("#botao");
+
+            btnElement.onclick = function(){
+                var box = document.createElement("div");
+                box.style.width  = '100px';
+                box.style.height = '100px';
+                box.style.backgroundColor = '#F00';
+                box.style.margin = '2px 0';
+
+                box.onmouseover = function() {
+                    this.style.backgroundColor = getRandomColor();
+                }
+                
+                appElement.appendChild(box);
+            }
+
+            function getRandomColor() {  
+                var letters = "0123456789ABCDEF";  
+                var color = "#";  
+                
+                for (var i = 0; i < 6; i++) {    
+                    color += letters[Math.floor(Math.random() * 16)];  
+                }
+
+                return color;
+            }
+        </script>
+    </body>
+</html> 
